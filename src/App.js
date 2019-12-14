@@ -8,77 +8,13 @@ import { Translation } from "react-i18next";
 import i18n from "i18next";
 // Router
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
-// Style-Components
-import styled from "styled-components";
-// Pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Page404 from "./pages/Page404";
 // function
 import getCookie from "./function/getCookie";
 import writeCookie from "./function/writeCookie";
-import ErrorMessage from "./components/ErrorMessage";
+import SpeedLine from './components/SpeedLine'
 
-const Content = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 35px 15px;
-  background: ${props => props.theme.background};
-  color: ${props => props.theme.textColor};
-`;
 
-const LanguageButton = styled.button`
-  min-width: 250px;
-  padding: 12px;
-  background: #111111;
-  color: #ffffff;
-  font-size: 14px;
-  border: 0;
-  margin-bottom: 0.5rem;
-`;
 
-const Label = styled.label`
-  position: relative;
-  width: 70px;
-  height: 35px;
-  display: block;
-  cursor: pointer;
-  div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-    background: #e9e9e9;
-    border-radius: 50px;
-    transition: all 300ms;
-  }
-  div::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 300ms;
-    left: 0;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"]:checked ~ div {
-    background: #4bd162;
-  }
-  input[type="checkbox"]:checked ~ div::after {
-    left: 100%;
-    transform: translateY(-50%) translateX(-100%);
-  }
-`;
 
 class App extends React.Component {
   state = {
@@ -136,63 +72,11 @@ class App extends React.Component {
   render() {
     const { getThemeSuccessfully, themeName, themeColors } = this.props;
     return (
-      getThemeSuccessfully && (
-        <Content theme={themeColors}>
-          <style>{`
-          body{
-            background: ${themeColors.background};
-          }
-          `}</style>
-          <Translation>{t => <h1>{t("app.hello")}</h1>}</Translation>
-          <LanguageButton onClick={this.changeLanguage}>
-            點擊切換語言，目前語言為：{this.state.language}
-          </LanguageButton>
-          <Label>
-            <input
-              type="checkbox"
-              onChange={this.handleChangeTheme}
-              checked={themeName === "dark"}
-            />
-            <div />
-          </Label>
-          <ErrorMessage />
-          <Router>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">
-                      -<Translation>{t => <>{t("app.home")}</>}</Translation>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about">
-                      -<Translation>{t => <>{t("app.about")}</>}</Translation>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/users">
-                      -<Translation>{t => <>{t("app.users")}</>}</Translation>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-              <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="*">
-                  <Page404 />
-                </Route>
-              </Switch>
-            </div>
-          </Router>
-        </Content>
-      )
-    );
+      <Router>
+        <SpeedLine />
+      </Router>
+
+    )
   }
 }
 
