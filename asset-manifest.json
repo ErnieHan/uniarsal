@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/uniarsal/static/css/main.1da8a160.chunk.css",
+    "main.js": "/uniarsal/static/js/main.82a0bf03.chunk.js",
+    "main.js.map": "/uniarsal/static/js/main.82a0bf03.chunk.js.map",
+    "runtime-main.js": "/uniarsal/static/js/runtime-main.91c082c7.js",
+    "runtime-main.js.map": "/uniarsal/static/js/runtime-main.91c082c7.js.map",
+    "static/js/2.cacb2c3a.chunk.js": "/uniarsal/static/js/2.cacb2c3a.chunk.js",
+    "static/js/2.cacb2c3a.chunk.js.map": "/uniarsal/static/js/2.cacb2c3a.chunk.js.map",
+    "index.html": "/uniarsal/index.html",
+    "precache-manifest.2f32889ceb3e4197ccfe4979219a1cb1.js": "/uniarsal/precache-manifest.2f32889ceb3e4197ccfe4979219a1cb1.js",
+    "service-worker.js": "/uniarsal/service-worker.js",
+    "static/css/main.1da8a160.chunk.css.map": "/uniarsal/static/css/main.1da8a160.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91c082c7.js",
+    "static/js/2.cacb2c3a.chunk.js",
+    "static/css/main.1da8a160.chunk.css",
+    "static/js/main.82a0bf03.chunk.js"
+  ]
+}
