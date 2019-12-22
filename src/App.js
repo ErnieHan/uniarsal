@@ -11,14 +11,11 @@ import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 // function
 import getCookie from "./function/getCookie";
 import writeCookie from "./function/writeCookie";
-import SpeedLine from './components/SpeedLine'
-
-
-
+import SpeedLine from "./components/SpeedLine";
 
 class App extends React.Component {
   state = {
-    language: "zhTW"
+    language: "zhTW",
   };
 
   componentDidMount() {
@@ -33,7 +30,7 @@ class App extends React.Component {
       // 3. 有語言的Cookie的話便抓取
       const now_language_cookie = getCookie("language");
       this.setState({
-        language: now_language_cookie
+        language: now_language_cookie,
       });
       i18n.changeLanguage(now_language_cookie);
     }
@@ -44,14 +41,14 @@ class App extends React.Component {
     if (this.state.language === "zhTW") {
       // 修改為繁體中文
       this.setState({
-        language: "en"
+        language: "en",
       });
       i18n.changeLanguage("en");
       writeCookie("language", "en");
     } else {
       // 修改為英文
       this.setState({
-        language: "zhTW"
+        language: "zhTW",
       });
       i18n.changeLanguage("zhTW");
       writeCookie("language", "zhTW");
@@ -73,10 +70,16 @@ class App extends React.Component {
     const { getThemeSuccessfully, themeName, themeColors } = this.props;
     return (
       <Router>
-        <SpeedLine />
+        <Switch>
+          <Route exact path="/">
+            <SpeedLine />
+          </Route>
+          <Route path="*">
+            <div>Error Page</div>
+          </Route>
+        </Switch>
       </Router>
-
-    )
+    );
   }
 }
 
@@ -87,21 +90,21 @@ App.propTypes = {
   themeName: PropTypes.string,
   themeColors: PropTypes.object,
   getThemeSuccessfully: PropTypes.bool,
-  changeTheme: PropTypes.func
+  changeTheme: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   setAppActive: state.app.active,
   themeName: state.app.updateTheme.themeName,
   themeColors: state.app.updateTheme.themeColors,
-  getThemeSuccessfully: state.app.updateTheme.getThemeSuccessfully
+  getThemeSuccessfully: state.app.updateTheme.getThemeSuccessfully,
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     setApp: () => dispatch(setApp()),
     readThemeCookie: () => dispatch(readThemeCookie()),
-    changeTheme: themeName => dispatch(changeTheme(themeName))
+    changeTheme: themeName => dispatch(changeTheme(themeName)),
   };
 };
 
