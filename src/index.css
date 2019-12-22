@@ -1,25 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 13px;
+  letter-spacing: 1.5px;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "微軟正黑體", "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "微軟正黑體", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:#3b5572;
-  color:#fff;
+  background: #3b5572;
+  color: #fff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 html,

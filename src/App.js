@@ -12,6 +12,7 @@ import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import getCookie from "./function/getCookie";
 import writeCookie from "./function/writeCookie";
 import SpeedLine from "./components/SpeedLine";
+import Box from "./components/Box";
 
 class App extends React.Component {
   state = {
@@ -72,7 +73,10 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/">
-            <SpeedLine />
+            <>
+              {/* <SpeedLine /> */}
+              <Box />
+            </>
           </Route>
           <Route exact path="/:language/about">
             <div>AboutPage</div>
