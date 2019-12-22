@@ -74,6 +74,9 @@ class App extends React.Component {
           <Route exact path="/">
             <SpeedLine />
           </Route>
+          <Route exact path="/:language/about">
+            <div>AboutPage</div>
+          </Route>
           <Route path="*">
             <div>Error Page</div>
           </Route>
