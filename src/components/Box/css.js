@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Content = styled.div`
   max-width: 1280px;
   margin: 35px auto;
+  @media (max-width: 767px) {
+    padding: 135px 15px 15px 15px;
+    margin: 0;
+  }
 `;
 
 export const BoxContent = styled.div`
@@ -13,6 +17,13 @@ export const BoxContent = styled.div`
   position: relative;
   margin-right: 1rem;
   margin-bottom: 2rem;
+  @media (max-width: 1024px) {
+    width: calc(50% - 1rem);
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-right: 0;
+  }
 `;
 
 export const Title = styled.div`
