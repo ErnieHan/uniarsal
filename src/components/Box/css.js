@@ -1,24 +1,22 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  display: flex;
   max-width: 1280px;
   margin: 35px auto;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const BoxContent = styled.div`
-  width: 350px;
-  height: 350px;
+  width: calc(25% - 1rem);
   border: 2px solid #ffc75e;
   border-radius: 5px;
   background: #394955;
   position: relative;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const Title = styled.div`
-  background: #40aca3;
+  background: ${props => (props.active ? "orangered" : "#40aca3")};
   position: absolute;
   top: -15px;
   left: 20px;
