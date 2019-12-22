@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/uniarsal/static/css/main.c363b4c6.chunk.css",
-    "main.js": "/uniarsal/static/js/main.c3a23142.chunk.js",
-    "main.js.map": "/uniarsal/static/js/main.c3a23142.chunk.js.map",
+    "main.js": "/uniarsal/static/js/main.c98d3b1e.chunk.js",
+    "main.js.map": "/uniarsal/static/js/main.c98d3b1e.chunk.js.map",
     "runtime-main.js": "/uniarsal/static/js/runtime-main.91c082c7.js",
     "runtime-main.js.map": "/uniarsal/static/js/runtime-main.91c082c7.js.map",
     "static/js/2.8d3ee828.chunk.js": "/uniarsal/static/js/2.8d3ee828.chunk.js",
     "static/js/2.8d3ee828.chunk.js.map": "/uniarsal/static/js/2.8d3ee828.chunk.js.map",
     "index.html": "/uniarsal/index.html",
-    "precache-manifest.7d1bcffc16033bc1f25b0a7651d77a55.js": "/uniarsal/precache-manifest.7d1bcffc16033bc1f25b0a7651d77a55.js",
+    "precache-manifest.e0f14be69b002741ede9f0d5660cc153.js": "/uniarsal/precache-manifest.e0f14be69b002741ede9f0d5660cc153.js",
     "service-worker.js": "/uniarsal/service-worker.js",
     "static/css/main.c363b4c6.chunk.css.map": "/uniarsal/static/css/main.c363b4c6.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.91c082c7.js",
     "static/js/2.8d3ee828.chunk.js",
     "static/css/main.c363b4c6.chunk.css",
-    "static/js/main.c3a23142.chunk.js"
+    "static/js/main.c98d3b1e.chunk.js"
   ]
 }
